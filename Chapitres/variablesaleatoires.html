@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <title>Pour Tout X - Révisions</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+
+        <header>
+            <img src="../assets/img/pourtoutxlogo.png" alt="logo" class="flex-image">
+            <h1 class="flex-text">VARIABLES ALEATOIRES</h1>
+        </header>
+
+        <nav>
+            <a href="../accueil.html">Accueil</a>
+            <a href="../chapitres.html">Chapitres</a>
+            <a href="../avis.php">Avis</a>
+        </nav>
+
+        <main>
+            <h2 class="grostitres">Chapitre 11 : Variables aléatoires</h2>
+            <h3 class="grandesparties">I - Variable aléatoire</h3>
+            <h4 class="petitesparties">1) Définition</h4>
+
+            <div class="definition">
+                <p><u>Définition</u> : Une variable aléatoire réelle \(X\) est une fonction définie sur \(\Omega\) à valeurs dans \(\mathbb{R}\). C'est à dire qu'à chaque issue de l'expérience, on va associer un nombre réel.</p>
+            </div>
+
+            <div class="exemple"> 
+                <p><u>Exemple</u> : Soit l'expérience aléatoire : "On lance un dé à 6 faces et on regarde le résultat". L'ensemble de toutes les issues possibles \(E=\{1;2;3;4;5;6\}\) s'appelle l'univers. On considère le jeu suivant :
+                    <ul>
+                        <li>Si le résultat est 5 ou 6, on gagne 2€.</li>
+                        <li>Sinon, on perd 1€.</li>
+                    </ul>
+                </p>
+                <p>
+                    On peut définir ainsi une variable aléatoire \(X\) sur \(E=\{1;2;3;4;5;6\}\) qui donne le gain et qui peut prendre les valeurs 2 ou -1.
+                    <ul>
+                        <li>Pour les issues 5 et 6, on a : \(X=2\).</li>
+                        <li>Pour les issues 1, 2, 3 et 4, on a : \(X=1\).</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div>
+                <p><u>Remarque</u> : Une variable aléatoire se note toujours avec une lettre majuscule. On réserve souvent celles du début de l'alphabet aux événements, et celles de la fin aux variables aléatoires.</p>
+            </div>
+
+            <h4 class="petitesparties">2) Loi de probabilité</h4>
+
+            <div class="definition">
+                <p>
+                    <u>Définition</u> : On appelle loi de probabilité d'une variable aléatoire \(X\) la donnée d'un tableau dans lequel figurent :
+                    <ul>
+                        <li>En première ligne, la liste des valeurs possibles \(x_i\) pour \(X\) ;</li>
+                        <li>En deuxième ligne, les probabilités \(P(X=x_i)\) correspondantes.</li>
+                    </ul>
+                </p>
+                <p>On la présente en général sous la forme :</p>
+                <table class="standard">
+                    <tr>
+                        <td>\(x_i\)</td>
+                        <td>\(x_1\)</td>
+                        <td>\(x_2\)</td>
+                        <td>...</td>
+                        <td>\(x_n\)</td>
+                    </tr>
+                    <tr>
+                        <td>\(P(X=x_i)\)</td>
+                        <td>\(P_1\)</td>
+                        <td>\(P_2\)</td>
+                        <td>...</td>
+                        <td>\(P_n\)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <p><em>Méthode</em> : Déterminer une loi de probabilité d'une variable aléatoire</p>
+                <div class="methode">
+                    <p>On lance simultanément deux dés à 6 faces et on note les valeurs obtenues. Soit \(X\) la variable égale à la plus grande des deux valeurs. Etablir la loi de probabilité de \(X\).</p>
+                    <table class="standard">
+                        <tr>
+                            <td>\(\frac{\text {Dé 1}}{\text{Dé 2}}\)</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1-1</td>
+                            <td>1-2</td>
+                            <td>1-3</td>
+                            <td>1-4</td>
+                            <td>1-5</td>
+                            <td>1-6</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2-2</td>
+                            <td>2-2</td>
+                            <td>2-3</td>
+                            <td>2-4</td>
+                            <td>2-5</td>
+                            <td>2-6</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3-1</td>
+                            <td>3-2</td>
+                            <td>3-3</td>
+                            <td>3-4</td>
+                            <td>3-5</td>
+                            <td>3-6</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4-1</td>
+                            <td>4-2</td>
+                            <td>4-3</td>
+                            <td>4-4</td>
+                            <td>4-5</td>
+                            <td>4-6</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5-1</td>
+                            <td>5-2</td>
+                            <td>5-3</td>
+                            <td>5-4</td>
+                            <td>5-5</td>
+                            <td>5-6</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>6-1</td>
+                            <td>6-2</td>
+                            <td>6-3</td>
+                            <td>6-4</td>
+                            <td>6-5</td>
+                            <td>6-6</td>
+                        </tr>
+                    </table>
+                    <table class="standard">
+                        <tr>
+                            <td>\(x\)</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>\(X=x\)</td>
+                            <td>\(\frac{1}{36}\)</td>
+                            <td>\(\frac{3}{36}\)</td>
+                            <td>\(\frac{5}{36}\)</td>
+                            <td>\(\frac{7}{36}\)</td>
+                            <td>\(\frac{9}{36}\)</td>
+                            <td>\(\frac{11}{36}\)</td>
+                        </tr>
+                    </table>
+                    <p>
+                        \(\frac{1}{36}+\frac{3}{36}+\frac{5}{36}+\frac{7}{36}+\frac{9}{36}+\frac{11}{36}=1\)
+                    </p>
+
+                </div>
+            </div>
+            
+            <div class="propriete">
+                <p>Dans une loi de probabilité, la somme des probabilités (c'est à dire pour la seconde ligne du tableau) doit toujours être égale à 1.</p>
+            </div>
+
+            <h3 class="grandesparties">II - Paramètres d'une variable aléatoire</h3>
+            <h4 class="petitesparties">1) Espérance mathématique</h4>
+
+            <div class="definition">
+                <p><u>Définition</u> : Soit \(X\) une variable aléatoire définie sur \(\Omega\) et qui prend les \(n\) valeurs \(x_1, x_2, ..., x_n\) de probabilités respectives \(P_1, P_2, ..., P_n\), c'est à dire dont la loi de probabilité est :
+                    <table class="standard">
+                        <tr>
+                            <td>\(x_i\)</td>
+                            <td>\(x_1\)</td>
+                            <td>\(x_2\)</td>
+                            <td>...</td>
+                            <td>\(x_n\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(P(X=x_i)\)</td>
+                            <td>\(P_1\)</td>
+                            <td>\(P_2\)</td>
+                            <td>...</td>
+                            <td>\(P_n\)</td>
+                        </tr>
+                    </table>
+                </p>
+                <p>On appelle espérance mathématique de la variable aléatoire \(X\), et on note \(E(X)\) le nombre réel défini par :</p>
+                <p class="important">\(E(X)=x_1\times P_1+x_2\times P_2+...+x_n\times P_n\)</p>
+            </div>
+
+            <div>
+                <p>
+                    <u>Remarques</u> :
+                    <ul>
+                        <li>Si \(X\) a une unité (€, centimètre, ...) alors l'espérance a la même unité.</li>
+                        <li>
+                            Il existe une notation qui permet d'éviter d'écrire cette formule avec des pointillés. On écrit aussi :
+                            <p class="important">\(\sum_{i=1}^{n} x_iP_i\)</p>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="propriete">
+                <p><u>Propriété</u> : L'espérance est la moyenne que l'on peut espérer si l'on répète l'expérience un grand nombre de fois.</p>
+            </div>
+
+            <div class="demo">
+                <p>
+                    <u>Démo</u> :
+                    \(\frac{x_1P_1\times x_2P_2+...+x_nP_n}{P_1+P_2+...+P_n}\) <br>
+                    \(\frac{x_1P_1+...+x_nP_n}{1}=x_1P_1+...+x_nP_n\)
+                </p>
+            </div>
+
+            <h4 class="petitesparties">2) Variance et écart-type</h4>
+            
+            <div class="definition">
+                <p><u>Définition</u> : On considère toujours une variable aléatoire \(X\) de loi de probabilité.</p>
+                <table class="standard">
+                    <tr>
+                        <td>\(x_i\)</td>
+                        <td>\(x_1\)</td>
+                        <td>\(x_2\)</td>
+                        <td>...</td>
+                        <td>\(x_n\)</td>
+                    </tr>
+                    <tr>
+                        <td>\(P(X=x_i)\)</td>
+                        <td>\(P_1\)</td>
+                        <td>\(P_2\)</td>
+                        <td>...</td>
+                        <td>\(P_n\)</td>
+                    </tr>
+                </table>
+                <p>On appelle variance de la variable aléatoire \(X\), et on note \(V(x)\), le réel positif.</p>
+                <p class="important">\(V(x)=E(X^2)-E(X)^2+x^2_1\times P_1+x^2_2\times P_2+...+x^2_n\times P_n-E(X)^2\)</p>
+                <p>On appelle écart-type de \(X\) et on note \(\sigma(x)\), la racine carrée de sa variance \(\sqrt{V(X)}\).</p>
+            </div>
+
+            <div>
+                <p><em>Méthode</em> : Calculer l'espérance, la variance et l'écart-type d'une variable aléatoire.</p>
+                <p>
+                    On tire une carte dans un jeu de 32 cartes.
+                    <ul>
+                        <li>Si on tire un, coeur, on gagne 2€.</li>
+                        <li>Si on tire un roi, on gagne 5€.</li>
+                        <li>Si on tire une autre carte, on perd 1€.</li>
+                    </ul>
+                </p>
+                <p>\(X\) entières la variable aléatoire donnant le gain du jeu.</p>
+                <div class="methode">
+                    <p>1) Calculer l'expérance de \(X\).</p>
+                    <table class="standard">
+                        <tr>
+                            <td>\(x\)</td>
+                            <td>-1</td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>\(P(X=x)\)</td>
+                            <td>\(\frac{21}{32}\)</td>
+                            <td>\(\frac{7}{32}\)</td>
+                            <td>\(\frac{3}{32}\)</td>
+                            <td>\(\frac{1}{32}\)</td>
+                        </tr>
+                    </table>
+                    <p>
+                        \(E(X)=-1\times \frac{21}{32}+2\times \frac{7}{32}+5\times \frac{3}{32}+7\times \frac{1}{32}=\frac{15}{32}\approx 0,47\)
+                    </p>
+                </div>
+
+                <div class="methode">
+                    <p>2) Donner une interprétation du résultat.</p>
+                    <p>En moyenne, on peut espérer gaagner 47 centimes à ce jour.</p>
+                </div>
+
+                <div class="methode">
+                    <p>3) Calculer la variance et l'écart-type de \(X\).</p>
+                    <p>
+                        \(V(X)=E(X^2)-E(X)^2\) <br>
+                        \(-1^2\times \frac{21}{32}+4\times \frac{7}{32}+25\times \frac{3}{32}=49\times \frac{1}{32}-(\frac{15}{32})^2\approx 5,19\).
+                    </p>
+                    <p>
+                        \(\sigma(X)=\sqrt{V(X)}\) <br>
+                        \(\approx \sqrt{5,19}\) <br>
+                        \(\approx 2,28\)
+                    </p>
+                </div>
+
+                <div class="propriete">
+                    <p><u>Propriété</u> : L'écart-type est une caractéristique de dispersion "espérée" pour la loi de probabilité d'une variable aléatoire.</p>
+                </div>
+            </div>
+
+            <button onclick="show('all')">Tout afficher</button>
+            <button onclick="show('definition')">Définitions</button>
+            <button onclick="show('propriete')">Propriétés</button>
+            <button onclick="show('methode')">Méthodes</button>
+            <button onclick="show('exemple')">Exemples</button>
+            <button onclick="show('demo')">Démonstrations</button>
+        </main>
+
+        <footer>
+            <p>2026 - Site de révisions Maths 1ère</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../script.js"></script>
+    </body>
+</html>

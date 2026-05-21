@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <title>Pour Tout X - Révisions</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+
+        <header>
+            <img src="../assets/img/pourtoutxlogo.png" alt="logo" class="flex-image">
+            <h1 class="flex-text">LA FONCTION EXPONENTIELLE</h1>
+        </header>
+
+        <nav>
+            <a href="../accueil.html">Accueil</a>
+            <a href="../chapitres.html">Chapitres</a>
+            <a href="../avis.php">Avis</a>
+        </nav>
+
+        <main>
+            <h2 class="grostitres">Chapitre 12 - La fonction exponentielle</h2>
+
+            <h3 class="grandesparties">I - Définition et nombre \(e\)</h3>
+            <p>La fonction exponentielle est l'unique fonction qui est égale à sa propre dérivée et qui vaut 1 en zéro.</p>
+            
+            <div class="definition">
+                <p><u>Définition mathématique :</u></p>
+                <ul>
+                    <li>Elle est définie sur \(\mathbb{R}\) (de \(-\infty\) à \(+\infty\)).</li>
+                    <li>Pour tout \(x\), \(f'(x) = f(x)\).</li>
+                    <li>\(f(0) = 1\).</li>
+                </ul>
+                <p>On note cette fonction \(f(x) = \exp(x)\) ou plus souvent <b>\(e^x\)</b>.</p>
+            </div>
+
+            <div class="demo">
+                <p><b>Le nombre \(e\) :</b> C'est la base de l'exponentielle. Sa valeur approchée est <b>\(e \approx 2,718\)</b>. <br>
+                C'est un nombre irrationnel, comme \(\pi\).</p>
+            </div>
+
+            <h3 class="grandesparties">II - Propriétés algébriques (Les règles de calcul)</h3>
+            <p>La fonction exponentielle suit les mêmes règles que les puissances. C'est ce qui rend les calculs simples !</p>
+            
+            <div class="propriete">
+                <p>Pour tous réels \(a\) et \(b\) :</p>
+                <ul>
+                    <li><b>Produit :</b> \(e^a \times e^b = e^{a+b}\)</li>
+                    <li><b>Inverse :</b> \(\frac{1}{e^a} = e^{-a}\)</li>
+                    <li><b>Quotient :</b> \(\frac{e^a}{e^b} = e^{a-b}\)</li>
+                    <li><b>Puissance :</b> \((e^a)^n = e^{n \times a}\)</li>
+                </ul>
+            </div>
+
+            <h3 class="grandesparties">III - Étude de la fonction (Variations et Signe)</h3>
+            <div class="propriete">
+                <p class="important">Règle d'or : Pour tout réel \(x\), <b>\(e^x > 0\)</b>.</p>
+                <p>Une exponentielle n'est <b>JAMAIS</b> négative ou nulle. C'est crucial pour tes tableaux de signes !</p>
+            </div>
+
+            <div class="definition">
+                <p><u>Sens de variation :</u></p>
+                <p>Comme sa dérivée est elle-même (\(f' = e^x\)) et qu'elle est toujours positive, la fonction exponentielle est <b>strictement croissante</b> sur \(\mathbb{R}\).</p>
+            </div>
+
+            <center>
+                <img src="../assets/img/exp/represantationGraphiqueExp.png" alt="Graphique de la fonction exponentielle" width="45%">
+            </center>
+
+            <h3 class="grandesparties">IV - Dérivée de \(e^{u(x)}\) </h3>
+            <p>En exercice, on te donnera souvent des fonctions plus complexes que juste \(e^x\).</p>
+            
+            <div class="propriete">
+                <p><u>Formule de dérivation :</u> Si \(u\) est une fonction dérivable, alors la dérivée de \(e^{u(x)}\) est :</p>
+                <p class="important">\((e^{u})' = u' \times e^{u}\)</p>
+            </div>
+
+            <div class="demo">
+                <p><b>Exemple type contrôle :</b><br>
+                Soit \(f(x) = e^{5x+3}\).<br>
+                Ici \(u(x) = 5x+3\), donc \(u'(x) = 5\).<br>
+                La dérivée est donc \(f'(x) = 5e^{5x+3}\).</p>
+            </div>
+
+            <h3 class="grandesparties">V - Résolution d'équations</h3>
+            <div class="propriete">
+                <p>Grâce à sa croissance stricte, on a deux règles simples pour résoudre des exercices :</p>
+                <ul>
+                    <li>\(e^a = e^b \iff a = b\)</li>
+                    <li>\(e^a < e^b \iff a < b\)</li>
+                </ul>
+            </div>
+
+            <button onclick="show('all')">Tout afficher</button>
+            <button onclick="show('definition')">Définitions</button>
+            <button onclick="show('propriete')">Propriétés</button>
+            <button onclick="show('methode')">Méthodes</button>
+            <button onclick="show('exemple')">Exemples</button>
+            <button onclick="show('demo')">Démonstrations</button>
+        </main>
+
+        <footer>
+            <p>2026 - Site de révisions Spé Maths - La Fonction Exponentielle</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../script.js"></script>
+    </body>
+</html>

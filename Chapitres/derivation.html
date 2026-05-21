@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <title>Pour Tout X - Révisions</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+
+        <header>
+            <img src="../assets/img/pourtoutxlogo.png" alt="logo" class="flex-image">
+            <h1 class="flex-text">DERIVATION</h1>
+        </header>
+
+        <nav>
+            <a href="../accueil.html">Accueil</a>
+            <a href="../chapitres.html">Chapitres</a>
+            <a href="../avis.php">Avis</a>
+        </nav>
+
+        <main>
+            <h2 class="grostitres">Chapitre 4 - Dérivation</h2>
+            <h3 class="grandesparties">I - Taux d'accroissement</h3>
+
+            <div class="definition">
+                <p><u>Définition</u> : On considère une fonction \(f\) définie sur un intervalle \(I\). Soit \(a\) un réel de \(I\).</p>
+                <p>La fonction \(h\to \frac{f(a+h)-f(a)}{h}\) (avec \(h\neq 0\)) est appelée le taux d'accroissement.</p>
+            </div>
+
+            <div>
+                <p><u>Interprétation graphique</u> : Soit \(C\) la courbe représentative de la fonction \(f\).</p>
+                <img src="../assets/img/derivation/interpretationgraph.png" alt="interpretationgraph" width="65%">
+                <p>Le taux d'accroissement de \(f\) entre \(a\) et \(a+h\) est le coefficient directeur de la droite \((AM)\), où \(A\) est le point de la courbe \(C\) d'abcisse \(a+h\).</p>
+            </div>
+
+            <h3 class="grandesparties">II - Nombre dérivé</h3>
+
+            <div class="definition">
+                <p><u>Définition</u> : On considère une fonction \(f\) définie  sur un intervalle \(I\). Soit \(a\) un réel de \(I\).</p>
+                <p>Si le taux d'accroissement de \(f\) entre \(a\) et \(a+h\), c'est à dire \(h\to \frac{f(a+h)-f(a)}{h}\) admet une limite finie lorsque \(h\) tend vers 0, alors on dit que :</p>
+                <ul>
+                    <li>\(f\) est dérivable en \(a\).</li>
+                    <li>la limite \(\lim_{h \to 0} h\to \frac{f(a+h)-f(a)}{h}\) est le nombre dérivé de \(f\) en \(a\), on le note \(f'(a)\).</li>
+                </ul>
+            </div>
+
+            <div>
+                <p><u>Interprétation graphique</u> :</p>
+                <img src="../assets/img/derivation/interpretationgraph2.png" alt="representationgraph2" width="65%">
+                <p>
+                    Le taux d'accroissement de \(f\) entre \(a\) et \(a+h\) tend vers 0, le point \(M\) se rapproche aussi près que l'on veut du point \(A\) et la droite \((AM)\) "ressemble" de plus en plus à une tangente à la courbe \(C\) au point \(A\) (c'est à dire une droite qui n'a qu'un seul point d'intersection avec la courbe).
+                    Le nombre dérivé, étant la limite du taux d'accroissement, correspond toujours au coefficient directeur (ou pente) de la droite \((AM)\) et donc de la tangente.
+                </p>
+            </div>
+
+            <div>
+                <p><u>Exemples</u> : </p>
+                <ul>
+                    <li>
+                        La fonction \(f:x\to 2x+1\) est-elle dérivable en un réel \(a\) quelconque ?
+                        <div class="exemple">
+                            <p>Pour \(h\neq 0\), on peut écrire :</p>
+                            <p>
+                                \(\frac{f(a+h)-f(a)}{h}\) <br>
+                                \(=\frac{2(a+h)+1-(2a+1)}{h}\) <br>
+                                \(=\frac{2h}{h}=2\)
+                            </p>
+                            <p>Le résultat ne dépend plus de \(h\) donc \(f\) est dérivable \(\forall a\in \mathbb{R}\).</p></p>
+                        </div>
+                    </li>
+                    <li>
+                        La fonction \(f:x\to x^3-7\) est-elle dérivable en \(a=2\) ?
+                        <div class="exemple">
+                            <p>
+                                \(f(2+h)=(2+h)^3-7\) <br>
+                                \(=(2+h)^2(2+h)-7\) <br>
+                                \(=(4+4h+h^2)(2+h)-7\) <br>
+                                \(=8+4h+8h+4h^2+2h^2+h^3-7\) <br>
+                                \(=h^3+6h+12h+1\)
+                            </p>
+                            <p>Pour \(h\neq 0\), on peut écrire :</p>
+                            <p>
+                                \(=\frac{f(a+h)-f(a)}{h}\) <br>
+                                \(f'(2)=\frac{f(2+h)-f(2)}{h}\) <br>
+                                \(=\frac{h^3+6h^2+12+1-1}{h}\) <br>
+                                \(=h^2+6h+\frac{12}{h}\)
+                            </p>
+                            <p>Le résultat dépend de \(h\) donc \(f\) n'est pas dérivable en \(a=2\).</p>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+
+            <h3 class="grandesparties">III - Equation de la tangente</h3>
+
+            <div class="propriete">
+                <p><u>Propriété</u> : Si \(f\) est dérivable en \(a\), alors une équation de la tangente en \(A(a,f(a))\) à la courbe représentative de \(f\) est :</p>
+                <p class="important">\(y=f'(a)(x-a)+f(a)\)</p>
+            </div>
+
+            <div>
+                <p><u>Démonstration</u> :</p>
+                <div class="demo">
+                    <p>
+                        Posons \(y=mx+p\). <br>
+                        Le coefficient directeur de la tangente est \(f'(a)\).
+                    </p>
+                    <ul>
+                        <li>
+                            <p>\(y=f'(a)x+p\)</p>
+                            <p>La tangente passe par le point \(A(a,f(a))\) donc on a :</p>
+                            <p>
+                            \(f(a)=f'(a)\times a+p\) <br>
+                            \(p=f(a)-f'(a)\times a\)
+                            </p> <br>
+                        </li>
+                        <li>
+                            \(y=f'(a)x+f(a)-f'(a)a\) <br>
+                            \(y=f'(a)(x-a)+f(a)\)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <p><u>Exemple</u> : La fonction \(f:x\to x^3-7\) est dérivable en \(a=2\) et son nombre dérivé est \(f'(2)=12\).</p>
+                <div class="exemple">
+                    <p>L'équation de la tangente à la courbe de \(f\) en \(A(2,f(2))\), c'est à dire \(A(2;1)\) est :</p>
+                    <p>\(y=f'(a)(x-a)+f(a)\)</p>
+                    <p>
+                        En 2 : \(f'(2)(x-2)+f(2)\) <br>
+                        \(=12(x-2)+1\) <br>
+                        \(=12x-24+1\) <br>
+                        \(=12x-23\)
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="grandesparties">IV - Calculs de fonctions dérivées</h3>
+            <h4 class="petitesparties">1) Définition</h4>
+
+            <div class="definition">
+                <p><u>Définition</u> : Soit \(f\) une fonction définie sur un intervalle \(I\).</p>
+                <p>Si la fonction \(f\) est dérivable en tout réel \(a\) de \(I\), on dit que la fonction est dérivable sur l'intervalle \(I\).
+                    Pour chaque nombre de \(I\), on peut donc trouver le nombre dérivé \(f'(a)\).
+                    Grâce à ce "mécanisme", on définit une fonction : la fonction dérivée de la fonction \(f\), que l'on note \(f'\). 
+                </p>
+            </div>
+
+            <div>
+                <p><u>Exemple</u> : Soit \(f\) la fonction carré, \(f(x)=x^2\).</p>
+                <div class="exemple">
+                    <p>
+                        \(\frac{f(a+h)-f(a)}{h}=\frac{(a+h)^2-a^2}{h}\) <br>
+                        \(=a^2+\frac{2ah+h^2}{h}-a^2\) <br>
+                        \(=2a+h\)
+                    </p>
+                    <p>
+                        \(\lim_{h \to 0} 2a+h=2a=f'(a)\)
+                    </p>
+                    <p>C'est vrai \(\forall a\in \mathbb{R}\) donc on définit la fonction dérivée \(f'(x)=2x\).</p>
+                </div>
+            </div>
+
+            <h4 class="petitesparties">2) Tableau des dérivées usuelles</h4>
+
+            <div>
+                <table class="standard">
+                    <tr>
+                        <th>Nom de la fonction \(f\)</th>
+                        <th>Expression de la fonction \(f\)</th>
+                        <th>Expression de la dérivée \(f'\)</th>
+                        <th>Domaine de définition</th>
+                        <th>Domaine de dérivabilité</th>
+                    </tr>
+                    <tr>
+                        <td>Constante</td>
+                        <td>\(f(x)=k\)</td>
+                        <td>\(f'(x)=0\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                    </tr>
+                    <tr>
+                        <td>Affine</td>
+                        <td>\(f(x)=mx+p\)</td>
+                        <td>\(f'(x)=m\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                    </tr>
+                    <tr>
+                        <td>Carré</td>
+                        <td>\(f(x)=x^2\)</td>
+                        <td>\(f'(x)=2x\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                    </tr>
+                    <tr>
+                        <td>Cube</td>
+                        <td>\(f(x)=x^3\)</td>
+                        <td>\(f'(x)=3x^2\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                    </tr>
+                    <tr>
+                        <td>Puissance \(n\) (entier)</td>
+                        <td>\(f(x)=x^n\)</td>
+                        <td>\(f'(x)=nx^{n-1}\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                    </tr>
+                    <tr>
+                        <td>Inverse</td>
+                        <td>\(f(x)=\frac{1}{x}\)</td>
+                        <td>\(f'(x)=-\frac{1}{x^2}\)</td>
+                        <td>\(]0;+\infty[\)</td>
+                        <td>\(]0;+\infty[\)</td>
+                    </tr>
+                    <tr>
+                        <td>Racine</td>
+                        <td>\(f(x)=\sqrt{x}\)</td>
+                        <td>\(f'(x)=\frac{1}{2\sqrt{x}}\)</td>
+                        <td>\([0;+\infty[\)</td>
+                        <td>\(]0;+\infty[\)</td>
+                    </tr>
+                    <tr>
+                        <td>Cosinus</td>
+                        <td>\(f(x)=cos(x)\)</td>
+                        <td>\(f'(x)=-sin(x)\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                    </tr>
+                    <tr>
+                        <td>Sinus</td>
+                        <td>\(f(x)=sin(x)\)</td>
+                        <td>\(f'(x)=cos(x)\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                    </tr>
+                    <tr>
+                        <td>Exponentielle</td>
+                        <td>\(f(x)=e^x\)</td>
+                        <td>\(f'(x)=e^x\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                        <td>\(\mathbb{R}\)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>3) Opérations de base sur les fonctions polynômiales</h3>
+
+            <div>
+                <div class="propriete">
+                    <p>
+                        <u>Théorème</u> : Soient \(u\) et \(v\) deux fonctions dérivables et \(k\) un nombre réel.
+                        Alors les fonctions construites à partir de \(u\) et \(v\)  sont dérivables.
+                        Voici comment calculer leur fonction dérivée :
+                    </p>
+                    <ul>
+                        <li>Somme : \((u+v)'=u'+v'\). Une somme se dérive terme à terme.</li>
+                        <li>Produit par une constante : \((k\times u)'=k\times u'\)</li>
+                        <li>Produit : \((u\times v)'=u'\times v+u\times v'\)</li>
+                        <li>Quotient : \((\frac{u}{v})'=\frac{u'\times v-u\times v'}{v^2}\)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <p><u>Démonstration</u> : Dérivée d'un produit</p>
+                <div class="methode">
+                    <p>\(f(x)=u(x)v(x)\)</p>
+                    <p>On calcule le taux d'accroissement entre \(x\) et \(x+h\) :</p>
+                    <p>
+                        \(\frac{f(a+h)-f(a)}{h}=u(x+h)v(x+h)-u(x)v(x)\) <br>
+                        \(=\frac{u(x+h)v(x+h)+u(x)v(x+h)-u(x)v(x+h)-u(x)v(x)}{h}\) <br>
+                        *\(=\frac{(u(x+h)-u(x))v(x+h)}{h}+\frac{(v(x+h)-v(x))}{h}u(x)\)
+                    </p>
+                    <p>\(\lim_{h \to 0} *=u'(x)\times v(x)+v'(x)\times u(x)\)</p>
+                </div>
+            </div>
+
+            <div>
+                <p><u>Exemples</u> :</p>
+                <div class="exemple">
+                    <ul>
+                        <li>
+                            <p>
+                                \(f(x)=x^3+x^2+\frac{1}{x}\) <br>
+                                \(f'(x)=3x^2+2x-\frac{1}{x^2}\)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                \(g(x)=3\sqrt{x}\) <br>
+                                \(g'(x)=3\times \frac{1}{2\sqrt{x}}=\frac{3}{2\sqrt{x}}\)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                \(h(x)=(x+1)\times(4x^2)\) <br>
+                                On applique la formule \(u'v+uv'\) : <br>
+                                \(h'(x)=u'v+uv'\) <br>
+                                \(=1\times 4x^2+(x+1)\times 8x\) <br>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                \(i(x)=\frac{\sqrt{x}}{1+x^2}\) <br>
+                                \(i'(x)=\frac{u'\times v-u\times v'}{v^2}\) <br>
+                                \(=\frac{\frac{1}{2\sqrt x}\times (1+x^2)-\sqrt x+2x}{(1+x)^2}\)
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button onclick="show('all')">Tout afficher</button>
+            <button onclick="show('definition')">Définitions</button>
+            <button onclick="show('propriete')">Propriétés</button>
+            <button onclick="show('methode')">Méthodes</button>
+            <button onclick="show('exemple')">Exemples</button>
+            <button onclick="show('demo')">Démonstrations</button>
+        </main>
+
+        <footer>
+        <p>2026 - Site de révision Maths 1ère</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <script src="../script.js"></script>
+    </body>
+</html>
