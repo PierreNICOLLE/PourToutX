@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <title>Pour Tout X - Révisions</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+
+        <header>
+            <img src="../assets/img/pourtoutxlogo.png" alt="logo" class="flex-image">
+            <h1 class="flex-text">PROBABILITES CONDITIONNELLES</h1>
+        </header>
+
+        <nav>
+            <a href="../accueil.html">Accueil</a>
+            <a href="../chapitres.html">Chapitres</a>
+            <a href="../avis.php">Avis</a>
+        </nav>
+
+        <main>
+            <h2 class="grostitres">Chapitre 5 - Probabilités conditionnelles</h2>
+            <h3 class="grandesparties">I - Rappels sur les probabilités</h3>
+
+            <div class="definition">
+                <p>
+                    <u>Définition</u> : L'ensemble de toutes les issues (ou éventualités) possibles d'une expérience aléatoire s'appelle l'univers de cette expérience aléatoire (souvent noté \(\Omega\).
+                    Un sous ensemble de cet univers s'appelle un événement.
+                </p>
+            </div>
+
+            <div class="propriete">
+                <p>
+                    <u>Propriété</u> : Une probabilité est toujours un nombre compris entre 0 et 1.
+                    Dans le cas où les issues sont équiprobables (c'est-à-dire qu'elles ont toutes les mêmes chances de se produire), la probabilité d'un événement est le quotient :
+                    <p class="important">
+                        \(P(A)=\frac{\text{Nombre de cas favorables en} A}{\text {Nombre de cas possibles dans l'univers}}\)
+                    </p>
+                </p>
+            </div>
+
+            <div class="definition">
+                <p>
+                    <u>Définition</u> :
+                    <ul>
+                        <li>L'événement contraire d'un événement \(A\) se réalise dès que \(A\) ne se réalise pas. L'événement contraire est noté \(\bar{A}\).</li>
+                        <li>L'intersection \(A\cap B\) (lire "\(A\) inter \(B\)") de deux événements est l'événement qui se réalise lorsque \(A\) ET \(B\) se réalisent simultanément.</li>
+                        <li>La réunion `\(A\cup B\) (lire "\(A\) union \(B\)") de deux événements est l'événement qui se réalise lorsque l'un au moins des deux événements se réalise (l'un OU l'autre OU les deux).</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="propriete">
+                <p>
+                    <u>Propriété</u> : Quels que soient les événements \(A\) et \(B\) :
+                    <ul>
+                        <li>\(P(\bar{A})=1-P(A)\)</li>
+                        <li>\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div>
+                <p><u>Exemple</u> : Le tableau ci-dessous donne la répartition des membres d'une association humanitaire.</p>
+                <img src="../assets/img/probascond/exemple1probas.png" alt="exemple1probas">
+                <div class="exemple">
+                    <p>a) Recopier et compléter ce diagramme par les effectifs qui conviennent.</p>
+                    <img src="../assets/img/probascond/exemple1probascorrige.png" alt="exemple1probascorrige">
+                </div>
+
+                <div class="exemple">
+                    b) On choisit au hasard la fiche de l'un des membres. Déterminer le nombre d'issues de chacun des événements suivants :
+                    <ul>
+                        <li>\(F\) : "La personne choisie est une femme".</li>
+                        <li>\(M\) : "La personne choisie est médecin".</li>
+                        <li>\(\bar{F}\)</li>
+                        <li>\(F\cap M\)</li>
+                        <li>\(F\cup M\)</li> <br>
+                    </ul>
+                    <ul>
+                        <li>\(F\) : \(9\)</li>
+                        <li>\(M\) : \(9\)</li>
+                        <li>\(\bar{F}\) : \(23\)</li>
+                        <li>\(F\cap M\) : \(5\)</li>
+                        <li>\(F\cup M\) : \(25\)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="grandesparties">II - Probabilités conditionnelles, arbre pondéré</h3>
+
+            <div class="definition">
+                <p><u>Définition</u> : Soient \(A\) et \(B\) deux événements avec \(P(A)\neq 0\).</p>
+                <p>On appelle probabilité conditionnelle de \(B\) sachant \(A\), la pondéré que l'événement \(B\) se réalise sachant que l'événement \(A\) est réalisé. Elle est notée \(P_A(B)\) et est définie par :</p>
+                <p class="important">\(P_A(B)=\frac{P(A\cap B)}{P(A)}\)</p>
+            </div>
+
+            <div>
+                <p>
+                    <u>Remarques</u> :
+                    <ul>
+                        <li>Si \(P(B)\neq 0\), la probabilité conditionnelle de \(A\) sachant \(B\) est : \(P_B(A)=\frac{P(A\cap B)}{P(B)}\)</li>
+                        <li>Si \(P(B)\neq 0\) et \(P(A)\neq 0\), alors on a : \(P(A\cap B)=P_A(B)\times P(A)=P_B(A)\times P(B)\)</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="propriete">
+                <p>
+                    <u>Propriétés :</u>
+                    <ul>
+                        <li>\(0\leq P_A(B)\leq 1\)</li>
+                        <li>\(P_A(\bar B)+1-P_A(B)\)</li>
+                        <li>\(P(A\cap B)=P(A)\times P_A(B)\)</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div>
+                <p><em>Méthode</em> : Calculer une probabilité conditionnelle à l'aide d'un tableau</p>
+                <p>Un laboratoire pharmaceutique a réalisé des tests sur 800 patients atteints d'une maladie. Certains sont traités avec le médicament \(A\), d'autres avec le médicament \(B\). Le tableau présente les résultats de l'étude :</p>
+                <table class="standard">
+                    <tr>
+                        <th></th>
+                        <th>Médicament A</th>
+                        <th>Médicament B</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>Guéri</td>
+                        <td>383</td>
+                        <td>72</td>
+                        <td>455</td>
+                    </tr>
+                    <tr>
+                        <td>Non guéri</td>
+                        <td>72</td>
+                        <td>54</td>
+                        <td>126</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>455</td>
+                        <td>345</td>
+                        <td>800</td>
+                    </tr>
+                </table>
+                
+
+                <div class="methode">
+                    <p>
+                        1) On choisit au hasard un patient et on considère les événements suivants :
+                        <ul>
+                            <li>\(A\) : "Le patient a pris le médicament \(A\)".</li>
+                            <li>\(G\) : "Le patient est guéri".</li>
+                        </ul>
+                        Calculer :
+                        <ul>
+                            <li>a) \(P(A)\)</li>
+                            <li>b) \(P(G)\)</li>
+                            <li>c) \(P(G\cap A)\)</li>
+                            <li>d) \(P(\bar G\cap A)\)</li> <br>
+                        </ul>
+                        <ul>
+                            <li>a) \(P(A)=\frac{455}{800}\)</li>
+                            <li>b) \(P(G)=\frac{674}{800}\)</li>
+                            <li>c) \(P(G\cap A)=\frac{383}{800}\)</li>
+                            <li>d) \(P(\bar G\cap A)=\frac{72}{800}\)</li>
+                        </ul>
+                    </p>
+                </div>
+                
+                <div class="methode">
+                    <p>2)a) On choisit maintenant au hasard un <u>patient guéri</u>.</p>
+                    <p>Calculer la probabilité que le patient ait pris le médicament \(A\) <b>sachant qu</b>'il est guéri.</p>
+                    <p>\(P_G(A)=\frac{383}{674}\)</p>
+                    <br>
+                    <p>b) On choisit maintenant au hasard un <u>patient traité par le médicament \(B\)</u>.</p>
+                    <p>Calculer la probabilité que le patient soit guéri <b>sachant qu</b>'il apris le médicament \(B\).</p>
+                    <p>\(P_{\bar{A}}(G)=\frac{291}{345}\)</p>
+                </div>
+            </div>
+
+            <h3 class="grandesparties">III - Arbre pondéré</h3>
+            <h4 class="petitesparties">1) Configuration</h4>
+
+            <div class="propriete">
+                <p><u>Propriété</u> : Soit \(A\) tel que \(P(A)\neq 0\) et \(P(\bar A)\neq 0\).</p>
+                <p>Dans l'arbre pondéré ci-dessous, les probabilités des événements \(A\cap B\), \(A\cap \bar B\) et \(\bar A\cap \bar B\) peuvent être obtenus en multipliant entre elles les probabilités écrites sur les branches qui "mènent" à l'événement.</p>
+            </div>
+            <img src="../assets/img/probascond/arbre1.png" alt="arbre1" width="50%">
+
+            <div>
+                <p><em>Méthode</em> : Construire un arbre pondéré</p>
+                <p>On donne l'arbre pondéré ci-contre.</p>
+                <img src="../assets/img/probascond/arbre2.png" alt="arbre2" width="30%">
+                
+                <div class="methode">
+                    <p>A l'aide de l'arbre, calculer \(P(A)\), \(P_\bar A(\bar B)\) et \(P(A\cap \bar B)\)</p>
+                    <ul>
+                        <li>\(P(A)=1-0,6=0,4\)</li>
+                        <li>\(P_\bar A(\bar B)=1-0,2=0,8\)</li>
+                        <li>\(P(A\cap \bar B)=0,4\times 0,7=0,28\)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="propriete">
+                <p><u>Propriété</u> :</p>
+                <img src="../assets/img/probascond/probastotales.png" alt="probastotales">
+            </div>
+
+            <div class="demo">
+                <p><u>Démo</u> :</p>
+                <p>
+                    C'est la propriété qu'on utilise quand on dit que la probabilité d'un événement est la somme de toutes ses probabilités des chemins qui mènent à cet événement.
+                    Elle vient du fait que les événements \(A_1\cap B\), \(A_2\cap B\), ... ,\(A_n\cap B\) sont deux à deux diisjoints et recouvrent entièrement B.
+                </p>
+                <img src="../assets/img/probascond/demoprobastotales.png" alt="demoprobastotales">
+            </div>
+
+            <h4 class="petitesparties">3) Règles</h4>
+
+            <div>
+                <p><u>Remarques</u> :</p>
+                <ul>
+                    <li>A l'origine de l'arbre, on place \(\Omega\) sur lequel on définit une probabilité.</li>
+                    <li>Une branche représente un lien probabiliste entre deux événements, \(A\) et \(B\) et la probabilité de cette branche est la probabilité de \(B\) sachant \(A\).</li>
+                    <li>Pour les deux premières branches, il s'agit de la probabilité de \(A\) sachant \(\Omega\).</li>
+                    <li>
+                        Dans un arbre pondéré, on appelle chemin une succession de plusieurs branches. Il représente l'intersection des événements rencontrés aux extrémités de ses branches et sa probabilité est le produit des probabilités notées sur ses branches.
+                        <br>Par exemple, sur le schéma ci-dessus, la probabilité de l'événement \(A\cap B\) est égale à \(P(A)\times P_A(B)\).
+                    </li>
+                    <li>
+                        Dans un arbre, la somme des probabilités issues d'un même noeud est égale à 1.
+                        <br>Par exemple, dans le schéma ci-dessus, \(P_A(B)+P_A(\bar B)=1\).
+                    </li>
+                    <li>
+                        La formule des probabilités totales permet de calculer la probabilité d'un événement qui est égale à la somme des probabilités des chemins qui mènent à celui-ci.
+                        <br>Par exemple : \(P(B)=P(A)\times P_A(B)+P(\bar A)\times P_{\bar A}(B)\).
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <p><u>Exemple</u> :</p>
+                <p>
+                    Lors d'une épidémie chez des bovins, on s'est aperçu que si la maladie est diagnostiquée suffisamment tôt chez un animal, on peut le guérir ; sinon la maladie est mortelle.
+                    Un test est mis au point et essayé sur un échantillon d'animaux dont 2 % est porteur de la maladie. On obtient les résultats suivants :
+                    <ul>
+                        <li>si un animal est porteur de la maladie, le test est positif dans 85 % des cas ;</li>
+                        <li>si un animal est sain, le test est négatif dans 95 % des cas.</li>
+                    </ul>
+                    On choisit de prendre ces fréquences observées comme probabilités pour toute la population et d'utiliser le test pour un dépistage préventif de la maladie.
+                    On note respectivement M et T les événements "Être porteur de la maladie" et "Avoir un test positif".
+                </p>
+                <div class="exemple">
+                    <p>a) Un animal est choisi au hasard. Quelle est la probabilité que son test soit positif ?</p>
+                    <img src="../assets/img/probascond/exemplearbre.jpg" alt="exemplearbre" width="50%">
+                    <p>
+                        D'après la formule des probabilités totales : <br>
+                        \(P(T)=P(M\cap T)+P(\bar M\cap T)\) <br>
+                        \(=P(M)\times P_M(T)+P(\bar M)\times P_\bar M(T)\) <br>
+                        \(=0,02\times 0,85+0,98\0,05\) <br>
+                        \(=0,066\)
+
+                    </p>
+                </div>
+                <div class="exemple">
+                    <p>b) Si le test du bovin est positif, quelle est la probabilité qu'il soit malade ?</p>
+                    <p>
+                        \(P_T(M)=\frac{P(M\cap T)}{P(T)}\) <br>
+                        \(=\frac {0,017}{0,066}\)
+                        \(\approx 26\%\)
+                    </p>
+                </div>
+
+                <h3 class="grandesparties">IV - Indépendance</h3>
+                <div class="definition">
+                    <p><u>Définition</u> : On dit que deux événements \(A\) et \(B\) de probabilité non nulle sont indépendants lorsque \(P(A\cap B)=P(A)\times P(B)\).</p>
+                </div>
+
+                <div>
+                    <p><u>Remarque</u> : On a également : \(A\) et \(B\) sont indépendants  si et seulement si \(P_A(B)=P(B)\) ou \(P_B(A)=P(A)\).</p>
+                </div>
+
+                <div>
+                    <p>
+                        <u>Exemple</u> : On tire une carte au hasard dans un jeu de 32 cartes.
+                        <ul>
+                            <li>Soit \(R\) l'événement "On tire un roi".</li>
+                            <li>Soit \(T\) l'événement "On tire un trèfle".</li>
+                            <li>Alors \(R\cap T\) est l'événement "On tire un roi de trèfle".</li>
+                        </ul>
+                    </p>
+                    <div class="exemple">
+                        <p>
+                            On a :
+                            \(P(R)=\frac{4}{32}=\frac{1}{8}\), \(P(T)=\frac{8}{32}=\frac{1}{4}\) et \(P(R\cap T)=\frac{1}{32}\). <br>
+                            Donc \(P(R)\times P(T)=\frac{1}{8}\times \frac{1}{4}=\frac{1}{32}=P(R\cap T)\). <br>
+                            Les événements \(R\) et \(T\) sont donc indépedants.
+                        </p>
+                        <p>Ainsi, par exemple, \(P_T(R)=P(R)\)? Ce qui se traduit par la probabilité de tirer un roi parmi les trèfles est égale à la probabilité de tirer un roi parmi toutes les cartes.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p><em>Méthode</em> : Utiliser l'indépendance de deux évènements</p>
+                    <p>
+                        Dans une population, un individu est atteint par la maladie m avec une probabilité égale à 0,005 et par la maladie \(n\) avec une probabilité égale à 0,01. <br>
+                        On choisit au hasard un individu de cette population. Soit M l'événement : "L'individu a la maladie \(m\)". <br>
+                        Soit \(N\) l'événement : "L'individu a la maladie \(n\)". <br>
+                        On suppose que les événements \(M\) et \(N\) sont indépendants. <br>
+                        Calculer la probabilité de l'événement \(E\) : "L'individu a au moins une des deux maladies". <br>
+                    </p>
+                    <div class="methode">
+                        \(P(E)=P(M\cup N)=P(M)+P(N)-P(M\cap N)=P(M)+P(N)-P(M)\times P(N)\) car \(M\) et \(N\) sont indépendants. <br>
+                        \(=0,005+0,01-(0,005\times 0,01)\) <br>
+                        \(=0,15-0,00005=0,01495\).
+                    </div>
+                </div>
+            </div>
+            
+            <button onclick="show('all')">Tout afficher</button>
+            <button onclick="show('definition')">Définitions</button>
+            <button onclick="show('propriete')">Propriétés</button>
+            <button onclick="show('methode')">Méthodes</button>
+            <button onclick="show('exemple')">Exemples</button>
+            <button onclick="show('demo')">Démonstrations</button>
+        </main>
+
+        <footer>
+        <p>2026 - Site de révision Maths 1ère</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <script src="../script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <title>Pour Tout X - Révisions</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+
+        <header>
+            <img src="../assets/img/pourtoutxlogo.png" alt="logo" class="flex-image">
+            <h1 class="flex-text">APPLICATIONS DE LA DÉRIVATION</h1>
+        </header>
+
+        <nav>
+            <a href="../accueil.html">Accueil</a>
+            <a href="../chapitres.html">Chapitres</a>
+            <a href="../avis.php">Avis</a>
+        </nav>
+
+        <main>
+            <h2 class="grostitres">Chapitre 8 - Applications à la dérivation</h2>
+
+            <h3 class="grandesparties">I - Lien entre signe de la dérivée et variations</h3>
+            <p>C'est l'une des parties les plus importantes de l'année, utile presque tout le temps.</p>
+            
+            <div class="propriete">
+                <p>Soit \(f\) une fonction dérivable sur un intervalle \(I\). </p>
+                <ul>
+                    <li>Si \(f'(x) > 0\), alors \(f\) est <b>strictement croissante</b> sur \(I\).</li>
+                    <li>Si \(f'(x) < 0\), alors \(f\) est <b>strictement décroissante</b> sur \(I\).</li>
+                    <li>Si \(f'(x) = 0\), alors \(f\) est <b>constante</b> sur \(I\).</li>
+                </ul>
+            </div>
+
+            <center>
+                <img src="../assets/img/applicationDérivation/applicationDérivation.png" alt="Lien signe dérivée et variations" width="80%">
+            </center>
+
+            <div class="demo">
+                <p><u>Remarque  :</u> Pour étudier les variations d'une fonction, on suit toujours les mêmes étapes :
+                <ol>
+                    <li>Calculer la dérivée \(f'(x)\).</li>
+                    <li>Étudier le <b>signe</b> de \(f'(x)\) (souvent en résolvant une inéquation ou un tableau de signes).</li>
+                    <li>Dresser le tableau de variations complet avec les flèches.</li>
+                </ol>
+                </p>
+            </div>
+
+            <h3 class="grandesparties">II - Extremums d'une fonction</h3>
+            <p>Un extremum (maximum ou minimum) correspond à un endroit où la courbe "change de direction".</p>
+            
+            <div class="definition">
+                <p><u>Théorème :</u> Si \(f\) admet un extremum local en \(x_0\), alors <b>\(f'(x_0) = 0\)</b>.</p>
+                <p><i>Attention :</i> La réciproque n'est pas toujours vraie. Il faut que la dérivée <b>s'annule ET change de signe</b> pour qu'il y ait un extremum.</p>
+            </div>
+
+            <center>
+                <img src="../assets/img/applicationDérivation/extremeunLocal.png" alt="Extremum et tangente horizontale" width="40%">
+            </center>
+            
+
+            <h3 class="grandesparties">III - Méthodologie du Tableau de Variations</h3>
+            <div class="propriete">
+                <p>Un tableau complet doit faire apparaître :</p>
+                <ul>
+                    <li>Le domaine de définition (les bornes).</li>
+                    <li>Les valeurs qui annulent la dérivée.</li>
+                    <li>Le signe de \(f'(x)\) (+ ou -).</li>
+                    <li>Les flèches de variation de \(f\).</li>
+                    <li>Les valeurs des extremums (calculées avec \(f(x)\)).</li>
+                </ul>
+            </div>
+
+            <button onclick="show('all')">Tout afficher</button>
+            <button onclick="show('definition')">Définitions</button>
+            <button onclick="show('propriete')">Propriétés</button>
+            <button onclick="show('methode')">Méthodes</button>
+            <button onclick="show('exemple')">Exemples</button>
+            <button onclick="show('demo')">Démonstrations</button>
+
+        </main>
+
+        <footer>
+            <p>2026 - Site de révisions Maths 1ère</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../script.js"></script>
+    </body>
+</html>

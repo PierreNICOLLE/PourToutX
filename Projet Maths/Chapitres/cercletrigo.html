@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <title>Pour Tout X - Révisions</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+
+        <header>
+            <img src="../assets/img/pourtoutxlogo.png" alt="logo" class="flex-image">
+            <h1 class="flex-text">LE CERCLE TRIGONOMÉTRIQUE</h1>
+        </header>
+
+        <nav>
+            <a href="../accueil.html">Accueil</a>
+            <a href="../chapitres.html">Chapitres</a>
+            <a href="../avis.php">Avis</a>
+        </nav>
+
+        <main>
+            <h2 class="grostitres">Chapitre 2 - Le cercle trigonométrique</h2>
+
+            <h3 class="grandesparties">I - Repérage sur le cercle trigonométrique</h3>
+            
+            <h4 class="petitesparties">1) Qu'est-ce que le cercle trigonométrique ?</h4>
+            <div class="definition">
+                <p><u>Définition :</u> Dans un repère orthonormé \((O, I, J)\), le <b>cercle trigonométrique</b> \(\mathcal{C}\) est le cercle de centre \(O\) et de rayon 1.</p>
+                <p>Il possède une orientation : le <b>sens direct</b> (ou sens positif, ou sens trigonométrique), qui est l'opposé de celui des aiguilles d'une montre.</p>
+            </div>
+            
+            <p><u>Remarque :</u> Le périmètre de ce cercle est \(P = 2\pi R = 2\pi \times 1 = 2\pi\).</p>
+            <p><u>Exemple :</u> L'arc \(IJ\) mesure \(2\pi \times \frac{1}{4} = \frac{\pi}{2}\).</p>
+            <center>
+                <img src="../assets/img/cercletrigo/sensLectureCerlce.png" alt="cercle orientation" width="25%">
+            </center>
+
+            <h4 class="petitesparties">2) Comment repérer un point sur le cercle ?</h4>
+            <div class="propriete">
+                <p>Pour repérer un point \(M\) sur le cercle trigonométrique, on "enroule" autour du cercle un axe vertical orienté vers le haut, gradué, d'origine \(I\).</p>
+                <p>On peut alors associer un réel \(x\) à ce point \(M\), \(x\) étant l'abscisse d'un point de l'axe qui vient se superposer au point \(M\).</p>
+                <p>On dit que \(M\) est le <b>point-image</b> de \(x\), noté \(M_x\).</p>
+            </div>
+            <center>
+                <img src="../assets/img/cercletrigo/enroulement.png" alt="enroulement droite" width="20%">
+            </center>
+
+            <h4 class="petitesparties">3) Repérages d'un même point</h4>
+            <div class="propriete">
+                <p><u>Propriétés :</u></p>
+                <ul>
+                    <li>Un point \(M\) du cercle est repéré par une <b>infinité de réels</b>. Si \(x\) est l'un d'entre eux, les autres sont de la forme \(x + 2k\pi\) avec \(k \in \mathbb{Z}\).</li>
+                    <li>Deux réels \(x_1\) et \(x_2\) repèrent le même point si et seulement si \(x_1 - x_2\) est un <b>multiple de \(2\pi\)</b>.</li>
+                </ul>
+            </div>
+
+            <div class="demo">
+                <u>Exemple :</u> Démontrer que \(\frac{\pi}{3}\), \(\frac{7\pi}{3}\) et \(-\frac{5\pi}{3}\) repèrent le même point.
+                <br>• \(\frac{7\pi}{3} - \frac{\pi}{3} = \frac{6\pi}{3} = 2\pi\) (un tour complet).
+                <br>• \(\frac{\pi}{3} - (-\frac{5\pi}{3}) = \frac{6\pi}{3} = 2\pi\).
+            </div>
+
+            <h3 class="grandesparties">II - Longueur d'arc et radian</h3>
+
+            <h4 class="petitesparties">1) Le radian</h4>
+            <div class="definition">
+                <p><u>Définition :</u> Soit \(M\) un point du cercle repéré par un réel \(x \in [0 ; 2\pi]\). On dit que \(x\) est une mesure de l'angle \(\widehat{IOM}\) en <b>radians</b></p>
+                <p>Il y a proportionnalité entre la mesure en degrés et la mesure en radians.</p>
+            </div>
+
+            <table class="standard" style="width:100%; text-align:center;">
+                <tr style="font-weight: bold;">
+                    <td>Angle en degrés (°)</td>
+                    <td>180</td>
+                    <td>90</td>
+                    <td>45</td>
+                    <td>60</td>
+                    <td>360</td>
+                </tr>
+                <tr>
+                    <td>Angle en radians (rad)</td>
+                    <td>\(\pi\)</td>
+                    <td>\(\frac{\pi}{2}\)</td>
+                    <td>\(\frac{\pi}{4}\)</td>
+                    <td>\(\frac{\pi}{3}\)</td>
+                    <td>\(2\pi\)</td>
+                </tr>
+            </table>
+
+            <h4 class="petitesparties">2) Longueur d'arc de cercle</h4>
+            <div class="propriete">
+                <p><u>Propriété :</u> La longueur \(L\) d'un arc de cercle de rayon \(R\) et d'angle au centre \(\alpha\) (en rad) est :</p>
+                <p class="important">\(L = \alpha \times R\) </p>
+            </div>
+
+            <center>
+                <img src="../assets/img/cercletrigo/radianttruc.png" alt="cercle valeurs remarquables" width="25%">
+            </center>
+
+            <h3 class="grandesparties">III - Fonctions trigonométriques : cosinus et sinus</h3>
+
+            <h4 class="petitesparties">1) Définition et premières propriétés</h4>
+            <div class="definition">
+                <p>Soit \(x\) un réel et \(M\) le point du cercle trigonométrique repéré par \(x\).</p>
+                <ul>
+                    <li>Le <b>cosinus</b> de \(x\), noté \(\cos(x)\), est l'abscisse de \(M\).</li>
+                    <li>Le <b>sinus</b> de \(x\), noté \(\sin(x)\), est l'ordonnée de \(M\).</li>
+                </ul>
+                <p>Le point \(M\) a donc pour coordonnées \((\cos(x) ; \sin(x))\).</p>
+            </div>
+
+            <div class="propriete">
+                <p><u>Propriétés :</u> Pour tout réel \(x\) :</p>
+                <ul>
+                    <li>\(-1 \leq \cos(x) \leq 1\) et \(-1 \leq \sin(x) \leq 1\) </li>
+                    <li>\(\cos^2(x) + \sin^2(x) = 1\) </li>
+                </ul>
+            </div>
+
+            <h4 class="petitesparties">2) Valeurs remarquables</h4>
+            <p>Il est indispensable de connaître les valeurs suivantes pour les angles usuels:</p>
+
+            <table class="standard" style="width:100%; text-align:center;">
+                <tr style="font-weight: bold; background-color: #f2f2f2;">
+                    <td>Angle en degrés</td>
+                    <td>0°</td>
+                    <td>30°</td>
+                    <td>45°</td>
+                    <td>60°</td>
+                    <td>90°</td>
+                </tr>
+                <tr>
+                    <td>Réel \(x\) (rad)</td>
+                    <td>0</td>
+                    <td>\(\frac{\pi}{6}\)</td>
+                    <td>\(\frac{\pi}{4}\)</td>
+                    <td>\(\frac{\pi}{3}\)</td>
+                    <td>\(\frac{\pi}{2}\)</td>
+                </tr>
+                <tr>
+                    <td>\(\cos(x)\)</td>
+                    <td>1</td>
+                    <td>\(\frac{\sqrt{3}}{2}\)</td>
+                    <td>\(\frac{\sqrt{2}}{2}\)</td>
+                    <td>\(\frac{1}{2}\)</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>\(\sin(x)\)</td>
+                    <td>0</td>
+                    <td>\(\frac{1}{2}\)</td>
+                    <td>\(\frac{\sqrt{2}}{2}\)</td>
+                    <td>\(\frac{\sqrt{3}}{2}\)</td>
+                    <td>1</td>
+                </tr>
+            </table>
+
+            <br>
+            <center>
+                <img src="../assets/img/cercletrigo/cerlceComplet.png" alt="cercle valeurs remarquables" width="65%">
+            </center>
+
+            <button onclick="show('all')">Tout afficher</button>
+            <button onclick="show('definition')">Définitions</button>
+            <button onclick="show('propriete')">Propriétés</button>
+            <button onclick="show('methode')">Méthodes</button>
+            <button onclick="show('exemple')">Exemples</button>
+            <button onclick="show('demo')">Démonstrations</button>
+        </main>
+
+        <footer>
+            <p>2026 - Site de révision Maths 1ère</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../script.js"></script>
+    </body>
+</html>
